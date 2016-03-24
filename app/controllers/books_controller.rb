@@ -41,6 +41,7 @@ class BooksController < ApplicationController
     @book = Book.find(params[:id])
   end
 
+  # Add fix for missing "release_date" for books controller
   def book_params
     params.require(:book).permit(:isbn, :title, :subtitle, :publisher_id, :release_date, :price, :edition, :pages, :abstract)
   end
